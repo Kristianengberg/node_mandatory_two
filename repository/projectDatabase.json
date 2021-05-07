@@ -1,0 +1,37 @@
+{
+    "projects": {
+        "project": [{
+                "projectName": "Async Deep Q Learning",
+                "projectImage": "https://user-images.githubusercontent.com/7412957/50371722-67a9bb00-0575-11e9-815d-e934495093b5.png",
+                "projectPitch": "Using Deep Q reinforcement learning to make the cartpole balance",
+                "projectDescription": "Using Python and the Keras library I created a neural network that uses Async Deep Q algorithm to balance the cartpole. This was also my Bachelors Thesis",
+                "projectTechnologies": "Python, Keras",
+                "projectGitLink": "https://github.com/Kristianengberg/P6_Bachelor"
+            },
+            {
+                "projectName": "Rental System in Java",
+                "projectImage": "https://pbs.twimg.com/profile_images/1235868806079057921/fTL08u_H_400x400.png",
+                "projectPitch": "Creating a rental system using Java and mySQL",
+                "projectDescription": "As a team of 4 we created a rental system for motorhomes with focus on best industry practices in terms of management. We were working with the agile method called UP",
+                "projectTechnologies": "Java, mySQL, springboot",
+                "projectGitLink": "https://github.com/Kristianengberg/NordicMotorhomeRental"
+            },
+            {
+                "projectName": "Inverse Kinematics in Unity for animation without animating",
+                "projectImage": "https://www.researchgate.net/profile/Ogawa-Takehiko/publication/46401997/figure/fig3/AS:316974497320964@1452584017490/Inverse-kinematics-problem-of-3-DOF-robot-arm-in-2D-plane-a-Three-joints-and-an.png",
+                "projectPitch": "Creating animations for creatures without animating them",
+                "projectDescription": "As part of a larger project my group and I created scripts in Unity for creating movement animations for arbitary animals",
+                "projectTechnologies": "Unity, C#",
+                "projectGitLink": "https://github.com/Kristianengberg/IK_project_v2"
+            },
+            {
+                "projectName": "Pathfinding using A* algorithm",
+                "projectImage": "https://media.geeksforgeeks.org/wp-content/uploads/a_-search-algorithm-1.png",
+                "projectPitch": "Creating a pathfinder in Unity using the A* algorithm on arbitary terrain",
+                "projectDescription": "As part of a larger project I created a unity program that can find the fastest route between two points on passable terrain",
+                "projectTechnologies": "Unity, C#",
+                "projectGitLink": "https://github.com/Kristianengberg/PathfindingAStar"
+            }
+        ]
+    }
+}

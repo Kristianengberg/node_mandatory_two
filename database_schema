@@ -1,0 +1,12 @@
+{
+    "projects": {
+        "project": [{
+                "projectName": "Title of project",
+                "projectImage": "an image of relevance",
+                "projectPitch": "A little sales pitch",
+                "projectDescription": "Description of project",
+                "projectTechnologies": "Python, Keras etc",
+                "projectGitLink": "gitlink"
+            }
+        ]
+    }

@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import session from "express-session";
+import { client } from "./repository/database.mjs"
 import fs from "fs";
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -25,7 +26,6 @@ app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use(helmet());
-
 
 
 
