@@ -1,4 +1,5 @@
 import express from "express";
+import bodyParser from "body-parser";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import session from "express-session";
@@ -8,20 +9,24 @@ import { fileURLToPath } from 'url';
 import { header } from "./components/header.mjs";
 import { footer } from "./components/footer.mjs";
 
+import contactRouter from "./routes/contact.mjs";
+
 
 // Following lines makes it so __dirname still works within ECMA - seems weird though that they didnt make it apart of ECMA
 const __filename = fileURLToPath(
     import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const app = express();
 app.use(express.static("public"));
-app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'));
-app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+
 app.use(helmet());
+
+
 
 
 const baseLimiter = rateLimit({
@@ -29,7 +34,15 @@ const baseLimiter = rateLimit({
     max: 100
 });
 
+const mailLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 5 // limit each IP to 100 requests per windowMs
+});
+
 app.use(baseLimiter);
+app.use("/contact/*", mailLimiter);
+
+app.use(contactRouter);
 
 /*
 app.use(session({
