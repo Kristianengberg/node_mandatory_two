@@ -1,4 +1,4 @@
-import MongoClient from "mongodb"
+/*import MongoClient from "mongodb"
 const mongoClient = MongoClient.MongoClient;
 import assert from "assert";
 
@@ -45,3 +45,4 @@ function dataRetriever() {
 dataRetriever();
 
 export { client };
+*/
