@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import session from "express-session";
-//import { client } from "./repository/database.mjs"
+import { client } from "./repository/database.mjs";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
