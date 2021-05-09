@@ -7,36 +7,42 @@ const url = "mongodb://localhost:27017";
 const dbName = "portfolioDatabase";
 const client = new mongoClient(url);
 
+
+let returnJson = {};
+
 function testConnection() {
-  client.connect(function (err) {
-    assert.strictEqual(null, err);
-    console.log("Connected successfully to server");
+    client.connect(function(err) {
+        assert.strictEqual(null, err);
+        console.log("Connected successfully to server");
 
-    const db = client.db(dbName);
+        const db = client.db(dbName);
 
-    client.close();
-  });
+        client.close();
+    });
 }
 
 function dataRetriever() {
-  client.connect(function (err) {
-    assert.strictEqual(null, err);
-    console.log("Connected successfully to server");
 
-    const db = client.db(dbName);
-    const projects = db.collection("projects");
+    client.connect(function(err) {
+        assert.strictEqual(null, err);
+        console.log("Connected successfully to server");
 
-    projects.find().toArray((error, data) => {
-      if (error) {
-        throw new Error(error);
-      }
-      console.log(JSON.stringify(data[0].project[0]));
+        const db = client.db(dbName);
+        const projects = db.collection("projects");
+
+        projects.find().toArray((error, data) => {
+            if (error) {
+                throw new Error(error);
+            }
+
+            returnJson = data[0].project;
+
+        });
     });
-  });
 
-  client.close();
+    client.close();
 }
 
 dataRetriever();
 
-export { client };
+export { client, returnJson };

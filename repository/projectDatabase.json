@@ -31,6 +31,14 @@
                 "projectDescription": "As part of a larger project I created a unity program that can find the fastest route between two points on passable terrain",
                 "projectTechnologies": "Unity, C#",
                 "projectGitLink": "https://github.com/Kristianengberg/PathfindingAStar"
+            },
+            {
+                "projectName": "Portfolio Website",
+                "projectImage": "https://media.geeksforgeeks.org/wp-content/uploads/a_-search-algorithm-1.png",
+                "projectPitch": "Creating a showcase website",
+                "projectDescription": "As part of a nodeJS course I created a portfolio website to showcase my projects and abilities",
+                "projectTechnologies": "nodeJS",
+                "projectGitLink": "https://github.com/Kristianengberg/node_mandatory_two"
             }
         ]
     }
